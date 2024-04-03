@@ -1,0 +1,51 @@
+name: tests_deploy-release
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  
+jobs:
+  tests_deploy-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Node.js to latest version LTS and setup cache
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+          cache: 'npm'
+
+      - name: Install dependencies for project
+        run: npm ci --ignore-scripts
+
+      - name: Lint TypeScript
+        run: npm run lint:ts
+
+      - name: Deploy PR (main) for new Release
+        uses: google-github-actions/release-please-action@v3
+        with:
+          release-type: node
+          default-branch: main
+          changelog-types: >-
+            [
+              {"type":"feat","section":"🚀 Features","hidden":false},
+              {"type":"fix","section":"🐛 Bug Fixes","hidden":false},
+              {"type":"chore","section":"🧹 Chores" ,"hidden":false},
+              {"type":"revert","section":"⏪ Reverts","hidden":false},
+              {"type":"ci","section":"💼 Continuous Integration","hidden":false},
+              {"type":"docs","section":"📚 Documentation","hidden":false},
+              {"type":"style","section":"💄 Styling","hidden":false},
+              {"type":"refactor","section":"♻️ Refactoring","hidden":false},
+              {"type":"test","section":"🧪 Tests","hidden":false},
+              {"type":"perf","section":"⏱ Performance Improvements","hidden":false},
+              {"type":"build","section":"🏗 Build System","hidden":false}
+            ]
+          token: ${{ secrets.GITHUB_TOKEN }}

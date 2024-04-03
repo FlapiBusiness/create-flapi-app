@@ -1,0 +1,25 @@
+# Dependencies
+node_modules
+
+# Editor
+.idea
+.vscode
+.vs
+
+# Build
+dist
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# macOS
+.DS_Store
+
+# Vim swap files
+*.swp
+
+# Project generate
+my-dev-project
+my-app
