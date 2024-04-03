@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.0 (2024-04-03)
+
+
+### 🚀 Features
+
+* add docs, ci, prettier, eslint, npm, husky, commitlint and logic ts ([aa7da6d](https://github.com/FlapiBusiness/create-flapi-app/commit/aa7da6df5bebe30cd941eba576373973a8e42010))
+
 ## [1.2.1](https://github.com/FlapiBusiness/create-flapi-app/compare/v1.2.0...v1.2.1) (2024-04-02)
 
 ### 🐛 Bug Fixes
