@@ -7,10 +7,11 @@
  * prettier.config.js nouvelle syntaxe depuis la version 3.x
  */
 export default {
-  semi: false,
-  singleQuote: true,
-  endOfLine: 'lf',
-  bracketSameLine: false,
-  tabWidth: 2,
-  printWidth: 120,
-}
+  semi: true, // Utiliser de point-virgule à la fin des lignes.
+  singleQuote: true, // Utilise des guillemets simples à la place des guillemets doubles.
+  endOfLine: 'lf', // Utilise des sauts de ligne UNIX.
+  bracketSameLine: false, // Les accolades ouvrantes sont sur la même ligne que la déclaration.
+  tabWidth: 2, // Utilise des tabulations de 2 espaces.
+  printWidth: 120, // Limite la largeur de la ligne à 120 caractères.
+  bracketSpacing: true, // Ajoute un espace après les accolades ouvrantes et avant les accolades fermantes.
+};
