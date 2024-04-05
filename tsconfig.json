@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ESNext", // Compiler vers la version la plus récente d'ECMAScript
     "module": "ESNext", // Utiliser les modules ES standard
-    "moduleResolution": "node", // Stratégie de résolution des modules
+    "moduleResolution": "Node", // Stratégie de résolution des modules
     "strict": true, // Activer tous les contrôles de type stricts
     "esModuleInterop": true, // Permet l'interopérabilité des modules ES avec les modules CommonJS
     "outDir": "./dist", // Dossier de sortie pour les fichiers compilés

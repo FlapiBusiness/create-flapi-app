@@ -1,9 +1,10 @@
-import eslintConfigPrettier from 'eslint-config-prettier';
-import eslintPluginPrettier from 'eslint-plugin-prettier';
-import eslintPluginTypeScript from '@typescript-eslint/eslint-plugin';
-import eslintPluginUnusedImports from 'eslint-plugin-unused-imports';
-import eslintPluginJSDoc from 'eslint-plugin-jsdoc';
-import eslintParserTypeScript from '@typescript-eslint/parser';
+import eslintConfigPrettier from 'eslint-config-prettier'
+import eslintPluginPrettier from 'eslint-plugin-prettier'
+import eslintPluginTypeScript from '@typescript-eslint/eslint-plugin'
+import eslintPluginUnusedImports from 'eslint-plugin-unused-imports'
+import eslintPluginStylistic from '@stylistic/eslint-plugin'
+import eslintPluginJSDoc from 'eslint-plugin-jsdoc'
+import eslintParserTypeScript from '@typescript-eslint/parser'
 
 // Configuration principale
 const mainConfig = {
@@ -13,6 +14,7 @@ const mainConfig = {
     'eslint-plugin-prettier': eslintPluginPrettier,
     'eslint-plugin-unused-imports': eslintPluginUnusedImports,
     'eslint-plugin-jsdoc': eslintPluginJSDoc,
+    '@stylistic-eslint-plugin': eslintPluginStylistic,
   },
   rules: {
     // Active les règles de formatage de Prettier comme des règles ESLint.
@@ -21,8 +23,6 @@ const mainConfig = {
     // Prévient les imports inutilisés, aidant à garder le code propre
     // et à réduire la taille du bundle en éliminant les dépendances inutiles.
     'eslint-plugin-unused-imports/no-unused-imports': 'error',
-
-    'eslint-plugin-jsdoc/require-description': 'error',
 
     '@typescript-eslint/naming-convention': [
       'error',
@@ -135,9 +135,9 @@ const mainConfig = {
     ],
 
     // Cette règle impose des espaces autour des annotations de type pour une meilleure lisibilité.
-    '@typescript-eslint/type-annotation-spacing': 'error',
+    '@stylistic-eslint-plugin/type-annotation-spacing': 'error',
 
-    '@typescript-eslint/member-delimiter-style': [
+    '@stylistic-eslint-plugin/member-delimiter-style': [
       'error',
       {
         multiline: {
@@ -150,6 +150,64 @@ const mainConfig = {
         },
       },
     ],
+
+    // Vérifie que les balises @access sont utilisées correctement pour indiquer l'accessibilité des membres (public, private, etc.).
+    'eslint-plugin-jsdoc/check-access': 'error',
+
+    // Assure que les astérisques dans les blocs de commentaires JSDoc sont alignés verticalement.
+    'eslint-plugin-jsdoc/check-alignment': 'error',
+
+    // Contrôle l'alignement des lignes à l'intérieur des blocs de commentaires JSDoc.
+    'eslint-plugin-jsdoc/check-line-alignment': 'error',
+
+    // S'assure que les noms des paramètres dans les commentaires JSDoc correspondent à
+    // ceux dans la déclaration de fonction, vérifie l'absence de doublons et la présence de tous les paramètres.
+    'eslint-plugin-jsdoc/check-param-names': 'error',
+
+    //Vérifie l'absence de doublons dans les noms de propriétés JSDoc
+    // et que les propriétés imbriquées ont des noms de racine corrects.
+    'eslint-plugin-jsdoc/check-property-names': 'error',
+
+    // Vérifie l'utilisation correcte des noms de balises JSDoc, y compris l'orthographe et l'existence de balises personnalisées.
+    'eslint-plugin-jsdoc/check-tag-names': 'error',
+
+    // Vérifie la validité des types spécifiés dans les balises JSDoc, offrant la possibilité de personnaliser les types acceptables.
+    'eslint-plugin-jsdoc/check-types': 'error',
+
+    // Vérifie que les commentaires JSDoc contiennent des descriptions pour tous les éléments documentés.
+    'eslint-plugin-jsdoc/require-jsdoc': [
+      'error',
+      {
+        require: {
+          FunctionDeclaration: true,
+          MethodDefinition: true,
+          ClassDeclaration: true,
+          ArrowFunctionExpression: true,
+          FunctionExpression: true,
+        },
+      },
+    ],
+
+    // Exige que tous les paramètres de fonction soient documentés avec une balise @param.
+    'eslint-plugin-jsdoc/require-param': 'error',
+
+    // Exige une description pour chaque balise @param documentée, améliorant ainsi la compréhension du but de chaque paramètre.
+    'eslint-plugin-jsdoc/require-param-description': 'error',
+
+    // Exige que chaque balise @param ait un nom de paramètre spécifié, assurant que la documentation est complète et précise.
+    'eslint-plugin-jsdoc/require-param-name': 'error',
+
+    // Exige que les instructions de retour dans les fonctions soient documentées avec une balise @returns.
+    'eslint-plugin-jsdoc/require-returns': 'error',
+
+    // Exige une instruction de retour dans le corps de la fonction si une balise @returns est spécifiée, garantissant que la documentation correspond au comportement de la fonction.
+    'eslint-plugin-jsdoc/require-returns-check': 'error',
+
+    // Exige une description pour la balise @returns, fournissant des détails sur ce que la fonction retourne.
+    'eslint-plugin-jsdoc/require-returns-description': 'error',
+
+    // Exige que tous les types utilisés dans les balises JSDoc soient valides, améliorant ainsi la précision et la fiabilité de la documentation.
+    'eslint-plugin-jsdoc/valid-types': 'error',
   },
   settings: {},
   languageOptions: {
@@ -163,15 +221,13 @@ const mainConfig = {
       node: true,
     },
   },
-  ...eslintConfigPrettier.overrides,
-  ...eslintPluginJSDoc.configs['flat/recommended'],
-};
+}
 
 // Configuration pour l'ignorance globale
 // Bug issue : https://github.com/eslint/eslint/issues/17400
 const ignoreConfig = {
   ignores: ['dist/**', 'my-dev-project/**', 'my-app/**'],
-};
+}
 
 /**
  * @type {import("eslint").Linter.Config}
@@ -179,4 +235,4 @@ const ignoreConfig = {
  * Exportation combinée des configurations
  * eslint.config.{js,mjs,cjs} nouvelle syntaxe depuis la version v9.x
  */
-export default [mainConfig, ignoreConfig];
+export default [mainConfig, ignoreConfig, eslintConfigPrettier]
