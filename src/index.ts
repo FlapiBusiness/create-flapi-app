@@ -4,7 +4,8 @@ import { Command } from 'commander';
 import fs from 'fs';
 import path from 'path';
 import chalk from 'chalk';
-import ora, { Ora } from 'ora';
+import ora from 'ora';
+import type { Ora } from 'ora';
 import { exec } from 'child_process';
 import util from 'util';
 import figlet from 'figlet';
@@ -12,7 +13,7 @@ import figlet from 'figlet';
 const execAsync: (command: string) => Promise<{ stdout: string; stderr: string }> = util.promisify(exec);
 const figletPromise: (text: string) => Promise<string> = util.promisify(figlet);
 
-const init = async (): Promise<void> => {
+const init: () => Promise<void> = async (): Promise<void> => {
   try {
     const data: string = await figletPromise('Flapi');
     console.log(chalk.blueBright(data));
@@ -64,7 +65,11 @@ const init = async (): Promise<void> => {
       console.log(chalk.white(`Your Flapi project has been created successfully!`));
     });
 
-  await program.parseAsync(process.argv);
+  try {
+    await program.parseAsync(process.argv);
+  } catch (error) {
+    console.error('Erreur lors du parsing des arguments de la ligne de commande', error);
+  }
 };
 
 init();

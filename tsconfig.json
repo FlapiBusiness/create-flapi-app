@@ -10,7 +10,7 @@
     "isolatedModules": true, // S'assurer que chaque fichier peut être transpilé séparément
     "allowSyntheticDefaultImports": true, // Permettre les imports par défaut synthétiques
     "baseUrl": ".", // Base directory to resolve non-relative module names
-    "noImplicitAny": true, // pour empêcher TypeScript de déduire le type any lorsqu'il ne peut pas déterminer le type d'une variable. Cela force le développeur à être explicite sur le type attendu.
+    "noImplicitAny": true // pour empêcher TypeScript de déduire le type any lorsqu'il ne peut pas déterminer le type d'une variable. Cela force le développeur à être explicite sur le type attendu.
   },
   "include": ["src/**/*"] // Inclure tous les fichiers TypeScript du dossier src
 }
