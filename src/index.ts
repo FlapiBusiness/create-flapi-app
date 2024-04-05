@@ -10,8 +10,8 @@ import { exec } from 'child_process'
 import util from 'util'
 import figlet from 'figlet'
 
-const execAsync: (command: string) => Promise<{ stdout: string; stderr: string }> = util.promisify(exec)
-const figletPromise: (text: string) => Promise<string> = util.promisify(figlet)
+const execAsync = (command: string, options = {}) => util.promisify(exec)(command, options);
+const figletPromise: (text: string) => Promise<string> = util.promisify(figlet);
 
 /**
  *

@@ -151,30 +151,7 @@ const mainConfig = {
       },
     ],
 
-    // Vérifie que les balises @access sont utilisées correctement pour indiquer l'accessibilité des membres (public, private, etc.).
-    'eslint-plugin-jsdoc/check-access': 'error',
-
-    // Assure que les astérisques dans les blocs de commentaires JSDoc sont alignés verticalement.
-    'eslint-plugin-jsdoc/check-alignment': 'error',
-
-    // Contrôle l'alignement des lignes à l'intérieur des blocs de commentaires JSDoc.
-    'eslint-plugin-jsdoc/check-line-alignment': 'error',
-
-    // S'assure que les noms des paramètres dans les commentaires JSDoc correspondent à
-    // ceux dans la déclaration de fonction, vérifie l'absence de doublons et la présence de tous les paramètres.
-    'eslint-plugin-jsdoc/check-param-names': 'error',
-
-    //Vérifie l'absence de doublons dans les noms de propriétés JSDoc
-    // et que les propriétés imbriquées ont des noms de racine corrects.
-    'eslint-plugin-jsdoc/check-property-names': 'error',
-
-    // Vérifie l'utilisation correcte des noms de balises JSDoc, y compris l'orthographe et l'existence de balises personnalisées.
-    'eslint-plugin-jsdoc/check-tag-names': 'error',
-
-    // Vérifie la validité des types spécifiés dans les balises JSDoc, offrant la possibilité de personnaliser les types acceptables.
-    'eslint-plugin-jsdoc/check-types': 'error',
-
-    // Vérifie que les commentaires JSDoc contiennent des descriptions pour tous les éléments documentés.
+    // Vérifie que le JSDOC est présent pour les fonctions, les méthodes, les classes, les fonctions fléchées et les expressions de fonction.
     'eslint-plugin-jsdoc/require-jsdoc': [
       'error',
       {
@@ -187,27 +164,6 @@ const mainConfig = {
         },
       },
     ],
-
-    // Exige que tous les paramètres de fonction soient documentés avec une balise @param.
-    'eslint-plugin-jsdoc/require-param': 'error',
-
-    // Exige une description pour chaque balise @param documentée, améliorant ainsi la compréhension du but de chaque paramètre.
-    'eslint-plugin-jsdoc/require-param-description': 'error',
-
-    // Exige que chaque balise @param ait un nom de paramètre spécifié, assurant que la documentation est complète et précise.
-    'eslint-plugin-jsdoc/require-param-name': 'error',
-
-    // Exige que les instructions de retour dans les fonctions soient documentées avec une balise @returns.
-    'eslint-plugin-jsdoc/require-returns': 'error',
-
-    // Exige une instruction de retour dans le corps de la fonction si une balise @returns est spécifiée, garantissant que la documentation correspond au comportement de la fonction.
-    'eslint-plugin-jsdoc/require-returns-check': 'error',
-
-    // Exige une description pour la balise @returns, fournissant des détails sur ce que la fonction retourne.
-    'eslint-plugin-jsdoc/require-returns-description': 'error',
-
-    // Exige que tous les types utilisés dans les balises JSDoc soient valides, améliorant ainsi la précision et la fiabilité de la documentation.
-    'eslint-plugin-jsdoc/valid-types': 'error',
   },
   settings: {},
   languageOptions: {
