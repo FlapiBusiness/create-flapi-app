@@ -34,7 +34,6 @@ const mainConfig = {
       {
         arrowParameter: true, // Oblige à déclarer le type de paramètre pour les fonctions fléchées.
         variableDeclaration: true, // Oblige à déclarer le type de variable lors de l'initialisation.
-        variableDeclarationIgnoreFunction: true, // Ignore les fonctions lors de la déclaration de type de variable.
       },
     ],
 
