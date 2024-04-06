@@ -9,6 +9,9 @@
     "resolveJsonModule": true, // Permettre l'importation de modules JSON
     "isolatedModules": true, // S'assurer que chaque fichier peut être transpilé séparément
     "allowSyntheticDefaultImports": true, // Permettre les imports par défaut synthétiques
+    "forceConsistentCasingInFileNames": true, // Vérifier la casse des noms de fichiers
+    "useDefineForClassFields": true, // Utiliser la syntaxe de définition pour les champs de classe
+    "allowJs": true, // Autoriser l'importation de fichiers JavaScript
     "baseUrl": "." // Base directory to resolve non-relative module names
   },
   "include": ["src/**/*"] // Inclure tous les fichiers TypeScript du dossier src
