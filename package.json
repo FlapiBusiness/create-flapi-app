@@ -22,8 +22,7 @@
     "lint:prettier": "prettier --check .",
     "lint:eslint": "eslint .",
     "lint:ts": "tsc --noEmit",
-    "lint:fix": "prettier --write --list-different . && npm run lint:prettier --fix && npm run lint:eslint --fix",
-    "prepare": "husky"
+    "lint:fix": "prettier --write --list-different . && npm run lint:prettier --fix && npm run lint:eslint --fix"
   },
   "dependencies": {
     "chalk": "^5.3.0",
