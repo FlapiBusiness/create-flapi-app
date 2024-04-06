@@ -13,7 +13,6 @@ import figlet from 'figlet'
 
 /**
  * Promisifie et exécute une commande shell avec des options optionnelles.
- *
  * @param {string} command - La commande à exécuter.
  * @param {ExecOptions} options - Les options de configuration de l'exécution de la commande.
  * @returns {Promise<{ stdout: string; stderr: string }>} Une promesse qui se résout avec les sorties de la commande.
@@ -23,7 +22,6 @@ const execAsync: (command: string, options?: ExecOptions) => Promise<{ stdout: s
 
 /**
  * Converts text to ASCII art using the figlet library.
- *
  * @param {string} text - The text to convert to ASCII art.
  * @returns {Promise<string>} A promise that resolves with the ASCII art generated from the text.
  */
@@ -41,7 +39,6 @@ const figletPromise: (text: string) => Promise<string> = (text: string): Promise
 
 /**
  * Initializes the CLI tool.
- *
  * @param {void}
  * @returns {Promise<void>} A promise that resolves when the CLI tool is initialized.
  */

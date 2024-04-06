@@ -79,16 +79,6 @@ const mainConfig = {
     // appeler des méthodes sur des objets qui peuvent être null ou undefined, réduisant ainsi le besoin de vérifications explicites de nullité.
     '@typescript-eslint/prefer-optional-chain': 'error',
 
-    // Exige ou interdit un espace avant la parenthèse ouvrante des déclarations de fonctions.
-    '@typescript-eslint/space-before-function-paren': [
-      'error',
-      {
-        anonymous: 'never',
-        named: 'never',
-        asyncArrow: 'always',
-      },
-    ],
-
     // Encourage l'utilisation de readonly pour marquer les membres de classe qui ne devraient pas être modifiés après l'initialisation.
     '@typescript-eslint/prefer-readonly': 'error',
 
@@ -124,6 +114,20 @@ const mainConfig = {
 
     // Cette règle impose des espaces autour des annotations de type pour une meilleure lisibilité.
     '@stylistic-eslint-plugin/type-annotation-spacing': 'error',
+
+    '@stylistic-eslint-plugin/member-delimiter-style': [
+      'error',
+      {
+        multiline: {
+          delimiter: 'semi', // Utilise des points-virgules pour séparer les membres dans les déclarations multilignes.
+          requireLast: true, // Exige un point-virgule après le dernier membre dans les déclarations multilignes.
+        },
+        singleline: {
+          delimiter: 'semi', // Utilise des points-virgules pour séparer les membres dans les déclarations sur une seule ligne.
+          requireLast: false, // N'exige PAS un point-virgule après le dernier membre dans les déclarations sur une seule ligne.
+        },
+      },
+    ],
 
     '@stylistic-eslint-plugin/member-delimiter-style': [
       'error',
@@ -179,4 +183,4 @@ const ignoreConfig = {
  * Exportation combinée des configurations
  * eslint.config.{js,mjs,cjs} nouvelle syntaxe depuis la version v9.x
  */
-export default [mainConfig, ignoreConfig, eslintConfigPrettier]
+export default [mainConfig, ignoreConfig, eslintPluginJSDoc.configs['flat/recommended'], eslintConfigPrettier]
