@@ -9,7 +9,7 @@ on:
 permissions:
   contents: write
   pull-requests: write
-  
+
 jobs:
   tests_deploy-release:
     runs-on: ubuntu-latest
