@@ -2,37 +2,32 @@
 
 ## [1.1.1](https://github.com/FlapiBusiness/create-flapi-app/compare/v1.1.0...v1.1.1) (2024-04-06)
 
-
 ### 🐛 Bug Fixes
 
-* delete script npm prepare for distribution package ([a2398fa](https://github.com/FlapiBusiness/create-flapi-app/commit/a2398fa5c262a6479a30bca723a039203d56bed5))
+- delete script npm prepare for distribution package ([a2398fa](https://github.com/FlapiBusiness/create-flapi-app/commit/a2398fa5c262a6479a30bca723a039203d56bed5))
 
 ## [1.1.0](https://github.com/FlapiBusiness/create-flapi-app/compare/v1.0.0...v1.1.0) (2024-04-06)
 
-
 ### 🚀 Features
 
-* add lib eslint jsdoc and unused import ([859d748](https://github.com/FlapiBusiness/create-flapi-app/commit/859d748e46c161dfb55df7bb3aa63094071d63b8))
-
+- add lib eslint jsdoc and unused import ([859d748](https://github.com/FlapiBusiness/create-flapi-app/commit/859d748e46c161dfb55df7bb3aa63094071d63b8))
 
 ### 💄 Styling
 
-* saut line ([bf5aa77](https://github.com/FlapiBusiness/create-flapi-app/commit/bf5aa77edbd365faf5ea871a6fc8114f8fa165a2))
-
+- saut line ([bf5aa77](https://github.com/FlapiBusiness/create-flapi-app/commit/bf5aa77edbd365faf5ea871a6fc8114f8fa165a2))
 
 ### ⏱ Performance Improvements
 
-* improvement eslint and prettier ([79df689](https://github.com/FlapiBusiness/create-flapi-app/commit/79df6891ab74f8f77e0e7e1b325cae39551e3591))
-* improvement eslint and prettier ([a802e8f](https://github.com/FlapiBusiness/create-flapi-app/commit/a802e8f59022cb4bae9a0d4e7d8fa182f35a0a7d))
-* improvement eslint.config ([4b5ffe1](https://github.com/FlapiBusiness/create-flapi-app/commit/4b5ffe1bb7e4eb6e53487500be739aee88853915))
-* last improvement for eslint and refactor husky for last version ([6214672](https://github.com/FlapiBusiness/create-flapi-app/commit/62146729fe2cfb6e4ed245b6632f3e1f7538311b))
+- improvement eslint and prettier ([79df689](https://github.com/FlapiBusiness/create-flapi-app/commit/79df6891ab74f8f77e0e7e1b325cae39551e3591))
+- improvement eslint and prettier ([a802e8f](https://github.com/FlapiBusiness/create-flapi-app/commit/a802e8f59022cb4bae9a0d4e7d8fa182f35a0a7d))
+- improvement eslint.config ([4b5ffe1](https://github.com/FlapiBusiness/create-flapi-app/commit/4b5ffe1bb7e4eb6e53487500be739aee88853915))
+- last improvement for eslint and refactor husky for last version ([6214672](https://github.com/FlapiBusiness/create-flapi-app/commit/62146729fe2cfb6e4ed245b6632f3e1f7538311b))
 
 ## 1.0.0 (2024-04-03)
 
-
 ### 🚀 Features
 
-* add docs, ci, prettier, eslint, npm, husky, commitlint and logic ts ([aa7da6d](https://github.com/FlapiBusiness/create-flapi-app/commit/aa7da6df5bebe30cd941eba576373973a8e42010))
+- add docs, ci, prettier, eslint, npm, husky, commitlint and logic ts ([aa7da6d](https://github.com/FlapiBusiness/create-flapi-app/commit/aa7da6df5bebe30cd941eba576373973a8e42010))
 
 ## [1.2.1](https://github.com/FlapiBusiness/create-flapi-app/compare/v1.2.0...v1.2.1) (2024-04-02)
 

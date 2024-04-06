@@ -32,7 +32,6 @@ const figletPromise: (text: string) => Promise<string> = (text: string): Promise
       if (err) {
         reject(err)
       } else {
-        // Assurez-vous que data est une chaîne avant de la résoudre.
         resolve(data ?? '')
       }
     })

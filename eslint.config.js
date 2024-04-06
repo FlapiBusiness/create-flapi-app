@@ -155,11 +155,11 @@ const mainConfig = {
   },
   settings: {},
   languageOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
     parser: eslintParserTypeScript,
     parserOptions: {
       project: './tsconfig.json',
+      ecmaVersion: 'latest',
+      sourceType: 'module',
     },
     globals: {
       node: true,
