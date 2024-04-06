@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/FlapiBusiness/create-flapi-app/compare/v1.1.0...v1.1.1) (2024-04-06)
+
+
+### 🐛 Bug Fixes
+
+* delete script npm prepare for distribution package ([a2398fa](https://github.com/FlapiBusiness/create-flapi-app/commit/a2398fa5c262a6479a30bca723a039203d56bed5))
+
 ## [1.1.0](https://github.com/FlapiBusiness/create-flapi-app/compare/v1.0.0...v1.1.0) (2024-04-06)
 
 
