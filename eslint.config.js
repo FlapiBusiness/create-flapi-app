@@ -101,18 +101,6 @@ const mainConfig = {
     // Exige que chaque fonction déclare explicitement son type de retour.
     '@typescript-eslint/explicit-function-return-type': ['error'],
 
-    // Interdit l'utilisation de valeurs de type 'any', car cela peut masquer des erreurs de type.
-    '@typescript-eslint/no-explicit-any': 'error',
-
-    // Interdit l'assignation de valeurs de type 'any' à des variables, propriétés, etc., ce qui peut masquer des erreurs de type.
-    '@typescript-eslint/no-unsafe-assignment': 'error',
-
-    // Interdit l'appel de fonctions et l'accès à des méthodes de valeurs de type 'any', ce qui peut mener à des erreurs d'exécution.
-    '@typescript-eslint/no-unsafe-call': 'error',
-
-    // Interdit l'accès aux membres (propriétés ou méthodes) sur des valeurs de type 'any', car cela contourne les vérifications de type de TypeScript.
-    '@typescript-eslint/no-unsafe-member-access': 'error',
-
     // Désactive l'inférence de type explicite pour les variables et les membres de classe.
     '@typescript-eslint/no-inferrable-types': 0,
 

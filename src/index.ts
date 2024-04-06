@@ -7,14 +7,42 @@ import chalk from 'chalk'
 import ora from 'ora'
 import type { Ora } from 'ora'
 import { exec } from 'child_process'
+import type { ExecOptions } from 'child_process'
 import util from 'util'
 import figlet from 'figlet'
 
-const execAsync = (command: string, options = {}) => util.promisify(exec)(command, options);
-const figletPromise: (text: string) => Promise<string> = util.promisify(figlet);
+/**
+ * Promisifie et exécute une commande shell avec des options optionnelles.
+ *
+ * @param command La commande shell à exécuter.
+ * @param options Les options à passer à l'exécution de la commande.
+ * @returns Une promesse qui se résout avec le résultat de l'exécution de la commande.
+ */
+const execAsync: (command: string, options?: ExecOptions) => Promise<{ stdout: string; stderr: string }> =
+  util.promisify(exec)
 
 /**
  *
+ * @param text
+ * @returns
+ */
+const figletPromise: (text: string) => Promise<string> = (text: string): Promise<string> => {
+  return new Promise<string>((resolve: (value: string) => void, reject: (reason?: any) => void) => {
+    figlet(text, (err: Error | null, data: string | undefined) => {
+      if (err) {
+        reject(err)
+      } else {
+        // Assurez-vous que data est une chaîne avant de la résoudre.
+        resolve(data ?? '')
+      }
+    })
+  })
+}
+
+/**
+ * Initializes the CLI tool.
+ * @param {void}
+ * @returns {Promise<void>} A promise that resolves when the CLI tool is initialized.
  */
 const init: () => Promise<void> = async (): Promise<void> => {
   try {
@@ -68,7 +96,11 @@ const init: () => Promise<void> = async (): Promise<void> => {
       console.log(chalk.white('Your Flapi project has been created successfully!'))
     })
 
-  await program.parseAsync(process.argv)
+  try {
+    await program.parseAsync(process.argv)
+  } catch (error: unknown) {
+    console.error(chalk.red('An error occurred while creating the Flapi project:'), error)
+  }
 }
 
 init()
