@@ -14,17 +14,18 @@ import figlet from 'figlet'
 /**
  * Promisifie et exécute une commande shell avec des options optionnelles.
  *
- * @param command La commande shell à exécuter.
- * @param options Les options à passer à l'exécution de la commande.
- * @returns Une promesse qui se résout avec le résultat de l'exécution de la commande.
+ * @param {string} command - La commande à exécuter.
+ * @param {ExecOptions} options - Les options de configuration de l'exécution de la commande.
+ * @returns {Promise<{ stdout: string; stderr: string }>} Une promesse qui se résout avec les sorties de la commande.
  */
 const execAsync: (command: string, options?: ExecOptions) => Promise<{ stdout: string; stderr: string }> =
   util.promisify(exec)
 
 /**
+ * Converts text to ASCII art using the figlet library.
  *
- * @param text
- * @returns
+ * @param {string} text - The text to convert to ASCII art.
+ * @returns {Promise<string>} A promise that resolves with the ASCII art generated from the text.
  */
 const figletPromise: (text: string) => Promise<string> = (text: string): Promise<string> => {
   return new Promise<string>((resolve: (value: string) => void, reject: (reason?: any) => void) => {
@@ -40,6 +41,7 @@ const figletPromise: (text: string) => Promise<string> = (text: string): Promise
 
 /**
  * Initializes the CLI tool.
+ *
  * @param {void}
  * @returns {Promise<void>} A promise that resolves when the CLI tool is initialized.
  */
