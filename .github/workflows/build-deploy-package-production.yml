@@ -2,8 +2,7 @@ name: build_deploy_package_production
 
 on:
   release:
-    types:
-      - published
+    types: [published]
   workflow_dispatch:
 
 jobs:
