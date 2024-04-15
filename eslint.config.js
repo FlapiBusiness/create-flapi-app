@@ -1,45 +1,56 @@
 import eslintConfigPrettier from 'eslint-config-prettier'
 import eslintPluginPrettier from 'eslint-plugin-prettier'
 import eslintPluginTypeScript from '@typescript-eslint/eslint-plugin'
-import eslintPluginUnusedImports from 'eslint-plugin-unused-imports'
 import eslintPluginStylistic from '@stylistic/eslint-plugin'
 import eslintPluginJSDoc from 'eslint-plugin-jsdoc'
+import eslintPluginUnusedImports from 'eslint-plugin-unused-imports'
+import eslintPluginImport from 'eslint-plugin-import'
 import eslintParserTypeScript from '@typescript-eslint/parser'
 
 // Configuration principale
 const mainConfig = {
-  files: ['**/*.{ts,tsx}'],
+  files: ['src/**/*.ts'],
   plugins: {
     '@typescript-eslint': eslintPluginTypeScript,
     'eslint-plugin-prettier': eslintPluginPrettier,
     'eslint-plugin-unused-imports': eslintPluginUnusedImports,
     'eslint-plugin-jsdoc': eslintPluginJSDoc,
     '@stylistic-eslint-plugin': eslintPluginStylistic,
+    'eslint-plugin-import': eslintPluginImport,
   },
   rules: {
+    /**
+     * ESLINT PLUGIN : eslint-plugin-prettier
+     */
     // Active les règles de formatage de Prettier comme des règles ESLint.
     'eslint-plugin-prettier/prettier': 'error',
 
+    /**
+     * ESLINT PLUGIN : eslint-plugin-unused-imports
+     */
     // Prévient les imports inutilisés, aidant à garder le code propre
     // et à réduire la taille du bundle en éliminant les dépendances inutiles.
     'eslint-plugin-unused-imports/no-unused-imports': 'error',
 
-    '@typescript-eslint/naming-convention': [
+    // Prévient les variables inutilisées, aidant à garder le code propre
+    'eslint-plugin-unused-imports/no-unused-vars': [
       'error',
       {
-        // Variables, fonctions, paramètres de fonction, méthodes, propriétés, arguments de méthode, etc.
-        selector: 'default',
-        format: ['camelCase'],
-        leadingUnderscore: 'allow', // Par exemple, _privateVariable pourrait être utilisé pour marquer une variable d'instance privée dans une classe.
-        trailingUnderscore: 'allow', //  L'utilisation d'underscores à la fin est moins courante, mais elle peut servir dans certains cas spécifiques où un identifiant pourrait autrement entrer en conflit avec un mot-clé du langage ou une limitation similaire.
-      },
-      {
-        // Classes, interfaces, types, enums et autres éléments de type-like
-        selector: 'typeLike',
-        format: ['PascalCase'],
+        vars: 'all', // Vérifie les variables non utilisées dans le code.
+        varsIgnorePattern: '^_', // Ignore les variables qui commencent par un underscore.
+        args: 'after-used', // Vérifie les arguments de fonction non utilisés après le dernier argument utilisé.
+        argsIgnorePattern: '^_', // Ignore les arguments de fonction qui commencent par un underscore.
       },
     ],
 
+    /**
+     * ESLINT PLUGIN : eslint-plugin-import
+     */
+    'eslint-plugin-import/no-unresolved': 'error',
+
+    /**
+     * ESLINT PLUGIN : @typescript-eslint/eslint-plugin
+     */
     // Avec des options pour forcer l'explicité des constructeurs:
     // Cela peut aider à garantir que les constructeurs de classe sont explicitement marqués comme public, private, ou protected
     '@typescript-eslint/explicit-member-accessibility': [
@@ -58,10 +69,6 @@ const mainConfig = {
     // Encourage l'utilisation de la syntaxe import type {...} pour les importations de types uniquement.
     // Réduit le coût de l'importation de types en TypeScript, car les importations de types ne sont pas incluses dans le code généré.
     '@typescript-eslint/consistent-type-imports': 'error',
-
-    // Les types explicites pour les valeurs de retour et les arguments de la
-    // fonction indiquent clairement à tout code appelant quelle est la limite d'entrée et de sortie du module
-    '@typescript-eslint/explicit-module-boundary-types': 'error',
 
     // Cette règle vous aide à identifier les fonctions async qui n'utilisent pas await. Cela peut être utile pour éviter des erreurs
     // où une fonction est marquée comme async sans raison, ce qui peut conduire à des comportements inattendus ou à une consommation inutile de ressources.
@@ -82,12 +89,6 @@ const mainConfig = {
     // Encourage l'utilisation de readonly pour marquer les membres de classe qui ne devraient pas être modifiés après l'initialisation.
     '@typescript-eslint/prefer-readonly': 'error',
 
-    // Interdit l'utilisation de "nombres magiques" dans le code, encourageant l'utilisation de constantes nommées pour une meilleure lisibilité.
-    '@typescript-eslint/no-magic-numbers': ['error', { ignore: [-1, 0, 1] }],
-
-    // Exige que les membres de la classe (propriétés et méthodes) spécifient explicitement leur visibilité (public, private, protected).
-    '@typescript-eslint/explicit-member-accessibility': 'error',
-
     // Exige que chaque fonction déclare explicitement son type de retour.
     '@typescript-eslint/explicit-function-return-type': ['error'],
 
@@ -102,47 +103,15 @@ const mainConfig = {
       },
     ],
 
-    // Interdit l'utilisation de variables non utilisées hors mi les variables commençant par '_'
-    '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
-
-    // Prévient l'utilisation de variables avant leur déclaration,
-    // ce qui peut aider à éviter les erreurs difficiles à tracer causées par le hoisting.
-    '@typescript-eslint/no-use-before-define': [
-      'error',
-      { functions: false, classes: true, variables: true, typedefs: true },
-    ],
-
+    /**
+     * ESLINT PLUGIN : @stylistic-eslint-plugin
+     */
     // Cette règle impose des espaces autour des annotations de type pour une meilleure lisibilité.
     '@stylistic-eslint-plugin/type-annotation-spacing': 'error',
 
-    '@stylistic-eslint-plugin/member-delimiter-style': [
-      'error',
-      {
-        multiline: {
-          delimiter: 'semi', // Utilise des points-virgules pour séparer les membres dans les déclarations multilignes.
-          requireLast: true, // Exige un point-virgule après le dernier membre dans les déclarations multilignes.
-        },
-        singleline: {
-          delimiter: 'semi', // Utilise des points-virgules pour séparer les membres dans les déclarations sur une seule ligne.
-          requireLast: false, // N'exige PAS un point-virgule après le dernier membre dans les déclarations sur une seule ligne.
-        },
-      },
-    ],
-
-    '@stylistic-eslint-plugin/member-delimiter-style': [
-      'error',
-      {
-        multiline: {
-          delimiter: 'semi', // Utilise des points-virgules pour séparer les membres dans les déclarations multilignes.
-          requireLast: true, // Exige un point-virgule après le dernier membre dans les déclarations multilignes.
-        },
-        singleline: {
-          delimiter: 'semi', // Utilise des points-virgules pour séparer les membres dans les déclarations sur une seule ligne.
-          requireLast: false, // N'exige PAS un point-virgule après le dernier membre dans les déclarations sur une seule ligne.
-        },
-      },
-    ],
-
+    /**
+     * ESLINT PLUGIN : eslint-plugin-jsdoc
+     */
     // Vérifie que le JSDOC est présent pour les fonctions, les méthodes, les classes, les fonctions fléchées et les expressions de fonction.
     'eslint-plugin-jsdoc/require-jsdoc': [
       'error',
@@ -154,10 +123,18 @@ const mainConfig = {
           ArrowFunctionExpression: true,
           FunctionExpression: true,
         },
+        contexts: ['TSTypeAliasDeclaration', 'TSInterfaceDeclaration'],
       },
     ],
   },
-  settings: {},
+  settings: {
+    'import/resolver': {
+      typescript: {
+        alwaysTryTypes: true,
+        project: ['./tsconfig.json'],
+      },
+    },
+  },
   languageOptions: {
     parser: eslintParserTypeScript,
     parserOptions: {
@@ -181,6 +158,6 @@ const ignoreConfig = {
  * @type {import("eslint").Linter.Config}
  *
  * Exportation combinée des configurations
- * eslint.config.{js,mjs,cjs} nouvelle syntaxe depuis la version v9.x
+ * eslint.config.{js,mjs,cjs} nouvelle syntaxe depuis la version >= 8.57
  */
 export default [mainConfig, ignoreConfig, eslintPluginJSDoc.configs['flat/recommended'], eslintConfigPrettier]

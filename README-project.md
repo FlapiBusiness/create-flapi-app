@@ -48,6 +48,13 @@ npx husky
 
 ## 🚀 Production
 
+### Manual Distribution Process
+
+```bash
+   npm run build
+   npm run start # test if success
+```
+
 ### ⚙️➡️ Automatic Distribution Process (CI / CD)
 
 #### Si c'est un nouveau projet suivez les instructions :

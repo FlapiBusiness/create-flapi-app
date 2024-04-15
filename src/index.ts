@@ -39,7 +39,6 @@ const figletPromise: (text: string) => Promise<string> = (text: string): Promise
 
 /**
  * Initializes the CLI tool.
- * @param {void}
  * @returns {Promise<void>} A promise that resolves when the CLI tool is initialized.
  */
 const init: () => Promise<void> = async (): Promise<void> => {
@@ -91,7 +90,23 @@ const init: () => Promise<void> = async (): Promise<void> => {
         process.exit(1)
       }
 
-      console.log(chalk.white('Your Flapi project has been created successfully!'))
+      // Print success message and next steps
+      console.log(
+        chalk.white(`
+╭──────────────────────────────────────────────────────────────────╮
+│    Your Flapi project has been created successfully!             │
+├──────────────────────────────────────────────────────────────────┤
+│                                                                  │
+│    ${chalk.blueBright('> cd ' + projectName)}                                                       │
+│    ${chalk.blueBright('> npm run dev')}                                                 │
+│    ${chalk.blueBright('> Open http://localhost:3000')}                                  │
+│                                                                  │
+│    ${chalk.white('> Have any questions?')}                                         │ 
+│    ${chalk.white('> Join our Discord server - https://discord.gg/flapi')}          │
+│                                                                  │
+╰──────────────────────────────────────────────────────────────────╯
+    `),
+      )
     })
 
   try {
