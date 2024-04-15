@@ -34,26 +34,5 @@ jobs:
         with:
           release-type: node
           target-branch: main
-          config: >
-            {
-              "packages": {
-                ".": {
-                  "release-type": "node",
-                  "changelog-sections": [
-                    {"type":"feat","section":"🚀 Features","hidden":false},
-                    {"type":"fix","section":"🐛 Bug Fixes","hidden":false},
-                    {"type":"chore","section":"🧹 Chores" ,"hidden":false},
-                    {"type":"revert","section":"⏪ Reverts","hidden":false},
-                    {"type":"ci","section":"💼 Continuous Integration","hidden":false},
-                    {"type":"docs","section":"📚 Documentation","hidden":false},
-                    {"type":"style","section":"💄 Styling","hidden":false},
-                    {"type":"refactor","section":"♻️ Refactoring","hidden":false},
-                    {"type":"test","section":"🧪 Tests","hidden":false},
-                    {"type":"perf","section":"⏱ Performance Improvements","hidden":false},
-                    {"type":"build","section":"🏗 Build System","hidden":false}
-                  ]
-                }
-              }
-            }
+          config-file: 'release-please-config.json'
           token: ${{ secrets.GITHUB_TOKEN }}
-

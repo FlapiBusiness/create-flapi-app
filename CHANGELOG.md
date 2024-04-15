@@ -2,42 +2,37 @@
 
 ## [1.3.0](https://github.com/FlapiBusiness/create-flapi-app/compare/v1.2.0...v1.3.0) (2024-04-15)
 
-
 ### Features
 
-* add dependabot, refactoring eslint and update ci development ([5742bee](https://github.com/FlapiBusiness/create-flapi-app/commit/5742beec0cc505ff78726a7c8fe89b8beab13e55))
-* add docs, ci, prettier, eslint, npm, husky, commitlint and logic ts ([aa7da6d](https://github.com/FlapiBusiness/create-flapi-app/commit/aa7da6df5bebe30cd941eba576373973a8e42010))
-* add lib eslint jsdoc and unused import ([859d748](https://github.com/FlapiBusiness/create-flapi-app/commit/859d748e46c161dfb55df7bb3aa63094071d63b8))
-* add new proportie in tsconfig.json ([51a1ec0](https://github.com/FlapiBusiness/create-flapi-app/commit/51a1ec0d33b0062ad8f95fc39721a09b8eedc074))
-
+- add dependabot, refactoring eslint and update ci development ([5742bee](https://github.com/FlapiBusiness/create-flapi-app/commit/5742beec0cc505ff78726a7c8fe89b8beab13e55))
+- add docs, ci, prettier, eslint, npm, husky, commitlint and logic ts ([aa7da6d](https://github.com/FlapiBusiness/create-flapi-app/commit/aa7da6df5bebe30cd941eba576373973a8e42010))
+- add lib eslint jsdoc and unused import ([859d748](https://github.com/FlapiBusiness/create-flapi-app/commit/859d748e46c161dfb55df7bb3aa63094071d63b8))
+- add new proportie in tsconfig.json ([51a1ec0](https://github.com/FlapiBusiness/create-flapi-app/commit/51a1ec0d33b0062ad8f95fc39721a09b8eedc074))
 
 ### Bug Fixes
 
-* delete script npm prepare for distribution package ([a2398fa](https://github.com/FlapiBusiness/create-flapi-app/commit/a2398fa5c262a6479a30bca723a039203d56bed5))
-* fixed jsdoc and bump version nodejs in engines ([d38d81c](https://github.com/FlapiBusiness/create-flapi-app/commit/d38d81cb47c4f50d6a3a8310058ac9c8e13976c5))
-* fixed properties ([a5b08e8](https://github.com/FlapiBusiness/create-flapi-app/commit/a5b08e806d9ba8c41fc30a012edc5454d2956a62))
-
+- delete script npm prepare for distribution package ([a2398fa](https://github.com/FlapiBusiness/create-flapi-app/commit/a2398fa5c262a6479a30bca723a039203d56bed5))
+- fixed jsdoc and bump version nodejs in engines ([d38d81c](https://github.com/FlapiBusiness/create-flapi-app/commit/d38d81cb47c4f50d6a3a8310058ac9c8e13976c5))
+- fixed properties ([a5b08e8](https://github.com/FlapiBusiness/create-flapi-app/commit/a5b08e806d9ba8c41fc30a012edc5454d2956a62))
 
 ### Performance Improvements
 
-* improvement eslint and prettier ([79df689](https://github.com/FlapiBusiness/create-flapi-app/commit/79df6891ab74f8f77e0e7e1b325cae39551e3591))
-* improvement eslint and prettier ([a802e8f](https://github.com/FlapiBusiness/create-flapi-app/commit/a802e8f59022cb4bae9a0d4e7d8fa182f35a0a7d))
-* improvement eslint.config ([4b5ffe1](https://github.com/FlapiBusiness/create-flapi-app/commit/4b5ffe1bb7e4eb6e53487500be739aee88853915))
-* last improvement for eslint and refactor husky for last version ([6214672](https://github.com/FlapiBusiness/create-flapi-app/commit/62146729fe2cfb6e4ed245b6632f3e1f7538311b))
+- improvement eslint and prettier ([79df689](https://github.com/FlapiBusiness/create-flapi-app/commit/79df6891ab74f8f77e0e7e1b325cae39551e3591))
+- improvement eslint and prettier ([a802e8f](https://github.com/FlapiBusiness/create-flapi-app/commit/a802e8f59022cb4bae9a0d4e7d8fa182f35a0a7d))
+- improvement eslint.config ([4b5ffe1](https://github.com/FlapiBusiness/create-flapi-app/commit/4b5ffe1bb7e4eb6e53487500be739aee88853915))
+- last improvement for eslint and refactor husky for last version ([6214672](https://github.com/FlapiBusiness/create-flapi-app/commit/62146729fe2cfb6e4ed245b6632f3e1f7538311b))
 
 ## [1.2.0](https://github.com/FlapiBusiness/create-flapi-app/compare/v1.1.1...v1.2.0) (2024-04-15)
 
-
 ### Features
 
-* add dependabot, refactoring eslint and update ci development ([5742bee](https://github.com/FlapiBusiness/create-flapi-app/commit/5742beec0cc505ff78726a7c8fe89b8beab13e55))
-* add new proportie in tsconfig.json ([51a1ec0](https://github.com/FlapiBusiness/create-flapi-app/commit/51a1ec0d33b0062ad8f95fc39721a09b8eedc074))
-
+- add dependabot, refactoring eslint and update ci development ([5742bee](https://github.com/FlapiBusiness/create-flapi-app/commit/5742beec0cc505ff78726a7c8fe89b8beab13e55))
+- add new proportie in tsconfig.json ([51a1ec0](https://github.com/FlapiBusiness/create-flapi-app/commit/51a1ec0d33b0062ad8f95fc39721a09b8eedc074))
 
 ### Bug Fixes
 
-* fixed jsdoc and bump version nodejs in engines ([d38d81c](https://github.com/FlapiBusiness/create-flapi-app/commit/d38d81cb47c4f50d6a3a8310058ac9c8e13976c5))
-* fixed properties ([a5b08e8](https://github.com/FlapiBusiness/create-flapi-app/commit/a5b08e806d9ba8c41fc30a012edc5454d2956a62))
+- fixed jsdoc and bump version nodejs in engines ([d38d81c](https://github.com/FlapiBusiness/create-flapi-app/commit/d38d81cb47c4f50d6a3a8310058ac9c8e13976c5))
+- fixed properties ([a5b08e8](https://github.com/FlapiBusiness/create-flapi-app/commit/a5b08e806d9ba8c41fc30a012edc5454d2956a62))
 
 ## [1.1.1](https://github.com/FlapiBusiness/create-flapi-app/compare/v1.1.0...v1.1.1) (2024-04-06)
 
