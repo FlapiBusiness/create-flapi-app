@@ -33,7 +33,7 @@ jobs:
         uses: google-github-actions/release-please-action@v4
         with:
           release-type: node
-          default-branch: main
+          target-branch: main
           changelog-types: >-
             [
               {"type":"feat","section":"🚀 Features","hidden":false},
