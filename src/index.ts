@@ -26,8 +26,8 @@ const execAsync: (command: string, options?: ExecOptions) => Promise<{ stdout: s
  * @returns {Promise<string>} A promise that resolves with the ASCII art generated from the text.
  */
 const figletPromise: (text: string) => Promise<string> = (text: string): Promise<string> => {
-  return new Promise<string>((resolve: (value: string) => void, reject: (reason?: any) => void) => {
-    figlet(text, (err: Error | null, data: string | undefined) => {
+  return new Promise<string>((resolve: (value: string) => void, reject: (reason?: any) => void): void => {
+    figlet(text, (err: Error | null, data: string | undefined): void => {
       if (err) {
         reject(err)
       } else {
