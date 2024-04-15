@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.2.0](https://github.com/FlapiBusiness/create-flapi-app/compare/v1.1.1...v1.2.0) (2024-04-15)
+
+
+### Features
+
+* add dependabot, refactoring eslint and update ci development ([5742bee](https://github.com/FlapiBusiness/create-flapi-app/commit/5742beec0cc505ff78726a7c8fe89b8beab13e55))
+* add new proportie in tsconfig.json ([51a1ec0](https://github.com/FlapiBusiness/create-flapi-app/commit/51a1ec0d33b0062ad8f95fc39721a09b8eedc074))
+
+
+### Bug Fixes
+
+* fixed jsdoc and bump version nodejs in engines ([d38d81c](https://github.com/FlapiBusiness/create-flapi-app/commit/d38d81cb47c4f50d6a3a8310058ac9c8e13976c5))
+* fixed properties ([a5b08e8](https://github.com/FlapiBusiness/create-flapi-app/commit/a5b08e806d9ba8c41fc30a012edc5454d2956a62))
+
 ## [1.1.1](https://github.com/FlapiBusiness/create-flapi-app/compare/v1.1.0...v1.1.1) (2024-04-06)
 
 ### 🐛 Bug Fixes
