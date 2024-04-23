@@ -31,7 +31,7 @@
     "ora": "^8.0.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.2.2",
+    "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
     "@stylistic/eslint-plugin": "^1.7.2",
     "@types/figlet": "^1.5.8",
