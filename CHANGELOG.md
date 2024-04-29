@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.1](https://github.com/FlapiBusiness/create-flapi-app/compare/v1.3.0...v1.3.1) (2024-04-15)
+
+
+### Bug Fixes
+
+* fixed ci for release-please ([45bdd37](https://github.com/FlapiBusiness/create-flapi-app/commit/45bdd37c06c4e5fde3c8aad8831b7f4d27f00a52))
+
 ## [1.3.0](https://github.com/FlapiBusiness/create-flapi-app/compare/v1.2.0...v1.3.0) (2024-04-15)
 
 ### Features
