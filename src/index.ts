@@ -86,7 +86,7 @@ const init: () => Promise<void> = async (): Promise<void> => {
 
       const downloadSpinner: Ora = ora('Downloading the Flapi starter kit...').start()
       try {
-        let gitRepo: string
+        let gitRepo: string | undefined
         if (kit === 'frontend') {
           gitRepo = 'git@github.com:FlapiBusiness/flapi-starterkit-frontend.git'
         } else if (kit === 'backend') {
