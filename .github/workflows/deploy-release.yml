@@ -30,7 +30,7 @@ jobs:
         run: npm run lint:ts && npm run lint:eslint
 
       - name: Deploy PR (main) for new Release
-        uses: google-github-actions/release-please-action@v4
+        uses: googleapis/release-please-action@v4
         with:
           release-type: node
           target-branch: main
