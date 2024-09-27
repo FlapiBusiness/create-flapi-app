@@ -4,7 +4,6 @@ import eslintPluginTypeScript from '@typescript-eslint/eslint-plugin'
 import eslintPluginStylistic from '@stylistic/eslint-plugin'
 import eslintPluginJSDoc from 'eslint-plugin-jsdoc'
 import eslintPluginUnusedImports from 'eslint-plugin-unused-imports'
-import eslintPluginImport from 'eslint-plugin-import'
 import eslintParserTypeScript from '@typescript-eslint/parser'
 
 // Configuration principale
@@ -16,7 +15,6 @@ const mainConfig = {
     'eslint-plugin-unused-imports': eslintPluginUnusedImports,
     'eslint-plugin-jsdoc': eslintPluginJSDoc,
     '@stylistic-eslint-plugin': eslintPluginStylistic,
-    'eslint-plugin-import': eslintPluginImport,
   },
   rules: {
     /**
@@ -42,11 +40,6 @@ const mainConfig = {
         argsIgnorePattern: '^_', // Ignore les arguments de fonction qui commencent par un underscore.
       },
     ],
-
-    /**
-     * ESLINT PLUGIN : eslint-plugin-import
-     */
-    'eslint-plugin-import/no-unresolved': 'error',
 
     /**
      * ESLINT PLUGIN : @typescript-eslint/eslint-plugin
