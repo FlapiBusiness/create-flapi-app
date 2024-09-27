@@ -10,6 +10,7 @@ import { exec } from 'child_process'
 import type { ExecOptions } from 'child_process'
 import util from 'util'
 import figlet from 'figlet'
+import inquirer from 'inquirer'
 
 /**
  * Promisifie et exécute une commande shell avec des options optionnelles.
@@ -70,9 +71,29 @@ const init: () => Promise<void> = async (): Promise<void> => {
       fs.mkdirSync(projectPath, { recursive: true })
       dirSpinner.succeed('Project directory created.')
 
+      // Utilisation d'inquirer pour afficher une liste interactive
+      const { kit } = await inquirer.prompt([
+        {
+          type: 'list',
+          name: 'kit',
+          message: 'Choose which starter kit to use:',
+          choices: [
+            { name: 'Frontend Starter Kit', value: 'frontend' },
+            { name: 'Backend Starter Kit', value: 'backend' },
+          ],
+        },
+      ])
+
       const downloadSpinner: Ora = ora('Downloading the Flapi starter kit...').start()
       try {
-        await execAsync('git clone git@github.com:FlapiBusiness/flapi-starterkit-frontend.git .', { cwd: projectPath })
+        let gitRepo: string
+        if (kit === 'frontend') {
+          gitRepo = 'git@github.com:FlapiBusiness/flapi-starterkit-frontend.git'
+        } else if (kit === 'backend') {
+          gitRepo = 'git@github.com:FlapiBusiness/flapi-starterkit-backend.git'
+        }
+
+        await execAsync(`git clone ${gitRepo} .`, { cwd: projectPath })
         downloadSpinner.succeed('Starter kit downloaded.')
       } catch (error: unknown) {
         downloadSpinner.fail('Failed to download the Flapi starter kit.')
