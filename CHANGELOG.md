@@ -2,16 +2,14 @@
 
 ## [1.4.0](https://github.com/FlapiBusiness/create-flapi-app/compare/v1.3.1...v1.4.0) (2024-09-27)
 
-
 ### Features
 
-* change ts-node to tsx for script npm and add package inquirer ([31e5a09](https://github.com/FlapiBusiness/create-flapi-app/commit/31e5a09b88af2595a1c4f03bb1a285818c18386c))
-* draw list repository for starterkit ([8f2ad83](https://github.com/FlapiBusiness/create-flapi-app/commit/8f2ad8305bb3b81cbfc6e969e2a8d6b98b6b3a43))
-
+- change ts-node to tsx for script npm and add package inquirer ([31e5a09](https://github.com/FlapiBusiness/create-flapi-app/commit/31e5a09b88af2595a1c4f03bb1a285818c18386c))
+- draw list repository for starterkit ([8f2ad83](https://github.com/FlapiBusiness/create-flapi-app/commit/8f2ad8305bb3b81cbfc6e969e2a8d6b98b6b3a43))
 
 ### Bug Fixes
 
-* fixed initialize var ([08a7e1a](https://github.com/FlapiBusiness/create-flapi-app/commit/08a7e1add0c811f80c33c8f23b6e10768e6ec3a5))
+- fixed initialize var ([08a7e1a](https://github.com/FlapiBusiness/create-flapi-app/commit/08a7e1add0c811f80c33c8f23b6e10768e6ec3a5))
 
 ## [1.3.1](https://github.com/FlapiBusiness/create-flapi-app/compare/v1.3.0...v1.3.1) (2024-04-15)
 
