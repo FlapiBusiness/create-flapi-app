@@ -117,13 +117,9 @@ const init: () => Promise<void> = async (): Promise<void> => {
 ╭──────────────────────────────────────────────────────────────────╮
 │    Your Flapi project has been created successfully!             │
 ├──────────────────────────────────────────────────────────────────┤
-│                                                                  │
-│    ${chalk.blueBright('> cd ' + projectName)}                                                       │
-│    ${chalk.blueBright('> npm run dev')}                                                 │
-│    ${chalk.blueBright('> Open http://localhost:3000')}                                  │
-│                                                                  │
-│    ${chalk.white('> Have any questions?')}                                         │ 
-│    ${chalk.white('> Join our Discord server - https://discord.gg/flapi')}          │
+│    ${chalk.cyan('> Get started by navigating to your project directory')}         │
+│    ${chalk.cyan('> Have any questions?')}                                         │ 
+│    ${chalk.cyan('> Join our Discord server - https://discord.gg/flapi')}          │
 │                                                                  │
 ╰──────────────────────────────────────────────────────────────────╯
     `),
