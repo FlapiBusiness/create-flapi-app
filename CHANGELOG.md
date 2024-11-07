@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.3](https://github.com/FlapiBusiness/create-flapi-app/compare/v1.4.2...v1.4.3) (2024-11-07)
+
+
+### Bug Fixes
+
+* delete in doc ([5edc8c3](https://github.com/FlapiBusiness/create-flapi-app/commit/5edc8c315b5069fe7213d700bb28531107276943))
+
 ## [1.4.2](https://github.com/FlapiBusiness/create-flapi-app/compare/v1.4.1...v1.4.2) (2024-10-03)
 
 
