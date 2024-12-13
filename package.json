@@ -6,11 +6,13 @@
   "files": [
     "dist/"
   ],
+  "description": "A CLI tool to generate a Flapi project with a starter kit, simplifying project setup for Flapi-based applications.",
   "homepage": "https://github.com/FlapiBusiness/create-flapi-app.git",
   "repository": {
     "url": "git+https://github.com/FlapiBusiness/create-flapi-app.git",
     "type": "git"
   },
+  "license": "UNLICENSED",
   "bin": {
     "create-flapi-app": "dist/index.js"
   },
