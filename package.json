@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "chalk": "^5.4.1",
-    "commander": "^12.1.0",
+    "commander": "^13.0.0",
     "figlet": "^1.8.0",
     "inquirer": "^12.3.0",
     "ora": "^8.1.1"
