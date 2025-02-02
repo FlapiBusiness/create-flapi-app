@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.1](https://github.com/FlapiBusiness/create-flapi-app/compare/v1.5.0...v1.5.1) (2025-02-02)
+
+
+### Bug Fixes
+
+* fixed documentation ([ee6c4a0](https://github.com/FlapiBusiness/create-flapi-app/commit/ee6c4a027a6eef0a176c4ad1108e789659eef16c))
+
 ## [1.5.0](https://github.com/FlapiBusiness/create-flapi-app/compare/v1.4.3...v1.5.0) (2025-02-02)
 
 
