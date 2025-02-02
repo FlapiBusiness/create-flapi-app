@@ -21,7 +21,7 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies for project
-        run: npm ci --ignore-scripts
+        run: npm install
 
       - name: Lint TypeScript and ESLint for project
         run: npm run lint:ts && npm run lint:eslint
