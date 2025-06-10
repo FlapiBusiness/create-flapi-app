@@ -2,18 +2,16 @@
 
 ## [1.5.1](https://github.com/FlapiBusiness/create-flapi-app/compare/v1.5.0...v1.5.1) (2025-02-02)
 
-
 ### Bug Fixes
 
-* fixed documentation ([ee6c4a0](https://github.com/FlapiBusiness/create-flapi-app/commit/ee6c4a027a6eef0a176c4ad1108e789659eef16c))
+- fixed documentation ([ee6c4a0](https://github.com/FlapiBusiness/create-flapi-app/commit/ee6c4a027a6eef0a176c4ad1108e789659eef16c))
 
 ## [1.5.0](https://github.com/FlapiBusiness/create-flapi-app/compare/v1.4.3...v1.5.0) (2025-02-02)
 
-
 ### Features
 
-* add license ([3be2c9b](https://github.com/FlapiBusiness/create-flapi-app/commit/3be2c9bbb02f7b0cb81403e5eda8b0e32b3c68fd))
-* delete dependabot ([3c78e5e](https://github.com/FlapiBusiness/create-flapi-app/commit/3c78e5ed1c6fad1a1d9a0b09c2b28b27666b4d9c))
+- add license ([3be2c9b](https://github.com/FlapiBusiness/create-flapi-app/commit/3be2c9bbb02f7b0cb81403e5eda8b0e32b3c68fd))
+- delete dependabot ([3c78e5e](https://github.com/FlapiBusiness/create-flapi-app/commit/3c78e5ed1c6fad1a1d9a0b09c2b28b27666b4d9c))
 
 ## [1.4.3](https://github.com/FlapiBusiness/create-flapi-app/compare/v1.4.2...v1.4.3) (2024-11-07)
 
